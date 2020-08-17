@@ -1,4 +1,4 @@
-require "project/version"
+require_relative "./project/version"
 
 module Project
   class Error < StandardError; end
@@ -9,3 +9,9 @@ end
 require 'pry'
 require 'rest-client'
 require 'json'
+
+
+require_relative "./project/api"
+require_relative "./project/cli"
+require_relative "./project/information"
+require_relative "./project/seasons"

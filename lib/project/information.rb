@@ -1,3 +1,3 @@
-class Project:Information
+class Project::Information
 
 end
