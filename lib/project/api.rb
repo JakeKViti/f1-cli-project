@@ -1,10 +1,7 @@
 class Project::API
     def self.get_seasons
-        seasons = RestClient.get('http://ergast.com/api/f1/seasons.json') 
-        #seasons1 = RestClient.get('http://ergast.com/api/f1/seasons?limit=30&offset=30.json') 
+        seasons = RestClient.get('http://ergast.com/api/f1/seasons.json?limit=100') 
         @seasons = JSON.parse(seasons) 
-        #@seasons1 = JSON.parse(seasons1)
-       #binding.pry  
         self.get_season_table 
         @test.each do |key, value|
             puts "Key = #{key} / Value = #{value}"
