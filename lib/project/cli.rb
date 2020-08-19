@@ -1,7 +1,7 @@
 class Project::CLI
     def start
         puts "Welcome to F1 API!"
-        Project::API.get_seasons
+        Project::API.get_circuts
     end
 
     def menu

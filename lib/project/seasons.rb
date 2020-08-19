@@ -5,6 +5,7 @@ class Project::Seasons
 
     def self.new_seasons_from_API(seasons)
         seasons.each do |key, value|
+            binding.pry
             self.checker(key, value)
         end
     end
