@@ -36,7 +36,7 @@ class Project::Year
             end
         end
         if @year != nil && @round != nil && @track != nil
-            puts "#{@year} #{@round} #{@track}"
+            puts "#{@round} #{@track}"
             @round = nil
             @track = nil
         end
