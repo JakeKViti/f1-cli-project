@@ -71,12 +71,21 @@ class Project::API
             @yearList = value
         end
 
-        #@yearList.each do |outer|
-            #outer.each do |key, value|
-               # if key == "Circuit"
-                  #  @circuit = value
-               #end
-            #end
-        #end
+    end    
+        
+    def self.get_driver
+        drivers = RestClient.get("http://ergast.com/api/f1/drivers.json?limit=10000")
+        @drivers = JSON.parse(drivers)
+        self.get_driver_table
+        Project::Drivers.new_driver_from_API(@driversTable)
     end
+
+    def self.get_driver_table
+        @drivers.each do |key, value|
+            @driversData = value
+        end
+        @driversData.each do |key, value|
+            @driversTable = value
+        end
+    end    
 end
