@@ -1,6 +1,6 @@
 class Project::CLI
     def start #This method starts when the program starts
-        puts "Welcome to F1 API!"
+        puts "Welcome to F1 Track Year Information!"
         puts "Loading! Please wait!"
         Project::API.get_seasons() #This will load all the years
         Project::API.get_circuts() #This will load all the circuts
@@ -21,15 +21,15 @@ class Project::CLI
         while action != "exit" 
             action = gets.strip 
             case action
-                when "season tracks" 
-                puts "What year would you like to see?"
-                trackYear 
                 when "tracks" 
                 trackGetter 
                 list_options 
                 when "years" 
                 yearGetter
                 list_options 
+                when "season tracks" 
+                puts "What year would you like to see?"
+                trackYear 
             end
         end
     end
@@ -44,10 +44,11 @@ class Project::CLI
             trackYear 
         elsif getYear > latestYear 
             puts "This season has not happened yet!"
+            puts "Please enter another year!"
             trackYear 
         end
-        if getYear >= 1949 && getYear <= latestYear 
-        Project::API.get_year(getYear) 
+        if getYear >= 1950 && getYear <= latestYear 
+            Project::API.get_year(getYear) 
             list_options 
         end
     end
