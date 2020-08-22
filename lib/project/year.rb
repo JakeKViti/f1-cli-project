@@ -1,5 +1,4 @@
 class Project::Year
-    attr_accessor :season, :seasonUrl, :year
 
     @@all = []
 
@@ -15,12 +14,6 @@ class Project::Year
         end
            # self.checker(key, value)
         end
-    end
-
-    def initialize(season=nil, seasonUrl=nil)
-        @season = season
-        @seasonUrl = seasonUrl
-        @@all << self
     end
 
     def self.checker(key, value)

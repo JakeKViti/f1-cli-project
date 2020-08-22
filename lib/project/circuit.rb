@@ -1,5 +1,5 @@
 class Project::Circuit
-    attr_accessor :circuit, :circuitUrl
+    attr_accessor :circuit
 
     @@all = []
 
@@ -9,22 +9,18 @@ class Project::Circuit
         end
     end
 
-    def initialize(circuit=nil, circuitUrl=nil)
+    def initialize(circuit=nil)
         @circuit = circuit
-        @circuitUrl = circuitUrl
         @@all << self
     end
 
     def self.checker(key, value)
         if key == "circuitName"
             @track = value
-        elsif key == "url"
-            @url = value
         end
-         if @track != nil && @url != nil
-            self.new(@track, @url)
+         if @track != nil
+            self.new(@track)
             @track = nil
-            @url = nil
         end
     end
 

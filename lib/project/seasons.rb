@@ -1,5 +1,5 @@
 class Project::Seasons
-    attr_accessor :season, :seasonUrl
+    attr_accessor :season
 
     @@all = []
 
@@ -9,22 +9,18 @@ class Project::Seasons
         end
     end
 
-    def initialize(season=nil, seasonUrl=nil)
+    def initialize(season=nil)
         @season = season
-        @seasonUrl = seasonUrl
         @@all << self
     end
 
     def self.checker(key, value)
         if key == "season"
             @number = value
-        elsif key == "url"
-            @url = value
         end
-         if @number != nil && @url != nil
-            self.new(@number, @url)
+         if @number != nil 
+            self.new(@number)
             @number = nil
-            @url = nil
         end
     end
 
