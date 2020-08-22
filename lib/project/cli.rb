@@ -10,25 +10,25 @@ class Project::CLI
 
     def list_options #This method lists the user their options
         puts "Here are your options"
-        puts "Enter 'q' to see what tracks were run in a desired year"
-        puts "Enter 'w' to see all tracks"
-        puts "Enter 'e' to see all years"
-        puts "Enter 'x' to end the code"
+        puts "Enter 'tracks' to see all tracks"
+        puts "Enter 'years' to see all years"
+        puts "Enter 'season tracks' to see what tracks were run in a desired year"
+        puts "Enter 'exit' to end the code"
     end
 
     def user_choice #This method will accept user input and get what they called
         action = ""
-        while action != "x" 
+        while action != "exit" 
             action = gets.strip 
             case action
-                when "q" 
+                when "season tracks" 
                 puts "What year would you like to see?"
                 trackYear 
-                when "w" 
-                yearGetter 
+                when "tracks" 
+                trackGetter 
                 list_options 
-                when "e" 
-                trackGetter
+                when "years" 
+                yearGetter
                 list_options 
             end
         end
@@ -52,7 +52,7 @@ class Project::CLI
         end
     end
 
-    def yearGetter()
+    def trackGetter()
         counter = 1 
         sorted = Project::Circuit.all.sort_by do |circuts| 
             circuts.circuit 
@@ -64,7 +64,7 @@ class Project::CLI
         end
     end 
 
-    def trackGetter()
+    def yearGetter()
         sorted = Project::Seasons.all.sort_by do |years| 
             years.season
         end
