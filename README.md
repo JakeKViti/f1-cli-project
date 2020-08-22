@@ -1,4 +1,4 @@
-# Project
+# F1-Cli-Project
 
 This project is designed to tell you about what years The Formula One World Drivers' Champions was competed for, what circuits they raced at, and users can find out what circuits were raced in any season of their choice. 
 
