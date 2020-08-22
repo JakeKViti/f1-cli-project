@@ -1,6 +1,6 @@
 # Project
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/project`. To experiment with that code, run `bin/console` for an interactive prompt.
+This project is designed to tell you about what years The Formula One World Drivers' Champions was competed for, what circuits they raced at, and users can find out what circuits were raced in any season of their choice. 
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'project'
+gem 'f1-cli-project'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install project
+    $ gem install f1-cli-project
 
 ## Usage
 
