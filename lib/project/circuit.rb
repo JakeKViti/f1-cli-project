@@ -5,7 +5,7 @@ class Project::Circuit
 
     def self.new_circuit_from_API(circuit)
         circuit.each do |key, value|
-            self.checker(key, value)
+            self.checker(key, value) #Sents hash info to checker to get what right information from it
         end
     end
 
@@ -15,12 +15,12 @@ class Project::Circuit
     end
 
     def self.checker(key, value)
-        if key == "circuitName"
+        if key == "circuitName" #looks for only circuitName in the hash to save
             @track = value
         end
-         if @track != nil
+         if @track != nil #When we have the right name, we initialize the information
             self.new(@track)
-            @track = nil
+            @track = nil #Nil it so we don't duplicate information
         end
     end
 

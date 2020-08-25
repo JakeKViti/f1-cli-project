@@ -5,7 +5,7 @@ class Project::Seasons
 
     def self.new_seasons_from_API(seasons)
         seasons.each do |key, value|
-            self.checker(key, value)
+            self.checker(key, value) #Sents hash info to checker to get what right information from it
         end
     end
 
@@ -15,12 +15,12 @@ class Project::Seasons
     end
 
     def self.checker(key, value)
-        if key == "season"
+        if key == "season" #looks for only season in the hash to save
             @number = value
         end
-         if @number != nil 
+         if @number != nil  #When we have the season year, we initialize the information
             self.new(@number)
-            @number = nil
+            @number = nil #Nil it so we don't duplicate information
         end
     end
 
