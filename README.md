@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+ To start this program. Type `bin/project.rb` into your command line. From there, you will get steps on how to access data you want. `tracks` will let you see every circuit F1 has raced at. `years` will show you every year a World Drivers' Championship was competed for. `season tracks` will then prompt you for a year. Once you entered a year of your choice (Given that year falls between 1950 - To Current Year) you will see every circuit raced in that year. Finally `exit` will close out of the program
+         
 
 ## Development
 
