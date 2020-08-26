@@ -2,8 +2,6 @@
 
 This project is designed to tell you about what years The Formula One World Drivers' Champions was competed for, what circuits they raced at, and users can find out what circuits were raced in any season of their choice. 
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
