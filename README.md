@@ -2,21 +2,6 @@
 
 This project is designed to tell you about what years The Formula One World Drivers' Champions was competed for, what circuits they raced at, and users can find out what circuits were raced in any season of their choice. 
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'f1-cli-project'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install f1-cli-project
 
 ## Usage
 
